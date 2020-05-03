@@ -1,12 +1,18 @@
 #!/bin/bash -x
 echo "Welcome msg"
-randomcheck=$((RANDOM%2));
 ispresent=1;
-if [ $ispresent -eq $randomcheck ]
+randomCheck=$((RANDOM%2));
+if [ $ispresent -eq $randomCheck ]
 then
-      echo "Employee is present..";
+      salaryperHour=20;
+      workingHourperday=8;
+      salary=$(($salaryperHour * $workingHourperday))
 else
-      echo "Employee is Absent..";
+     salary=0;
 fi
+echo $salary;
+
+
+
 
 
